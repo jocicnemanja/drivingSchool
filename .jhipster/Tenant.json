@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210105743",
+  "dto": "mapstruct",
+  "entityTableName": "tenant",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Tenant",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

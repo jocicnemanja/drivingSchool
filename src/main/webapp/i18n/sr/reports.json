@@ -1,0 +1,25 @@
+{
+  "drivingSchoolApp": {
+    "reports": {
+      "home": {
+        "title": "Reports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Reports",
+        "createOrEditLabel": "Kreirajte ili izmenite Reports",
+        "notFound": "No Reports found"
+      },
+      "created": "Kreiran je novi Reports pod nazivom {{ param }}",
+      "updated": "Reports pod nazivom {{ param }} je ažuriran",
+      "deleted": "Reports pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Reports pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Reports"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type"
+    }
+  }
+}

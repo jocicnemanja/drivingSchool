@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="lesson">
+      <h2 data-cy="lessonDetailsHeading"><span jhiTranslate="drivingSchoolApp.lesson.detail.title">Lesson</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ lesson.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.lesson.date">Date</span></dt>
+        <dd>
+          <span>{{ lesson.date | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.lesson.type">Type</span></dt>
+        <dd>
+          <span>{{ lesson.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.lesson.costAmount">Cost Amount</span></dt>
+        <dd>
+          <span>{{ lesson.costAmount }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.lesson.student">Student</span></dt>
+        <dd>
+          <div *ngIf="lesson.student">
+            <a [routerLink]="['/student', lesson.student.id, 'view']">{{ lesson.student.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/lesson', lesson.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

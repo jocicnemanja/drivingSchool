@@ -1,0 +1,26 @@
+{
+  "drivingSchoolApp": {
+    "payment": {
+      "home": {
+        "title": "Payments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Payment",
+        "createOrEditLabel": "Kreirajte ili izmenite Payment",
+        "notFound": "No Payments found"
+      },
+      "created": "Kreiran je novi Payment pod nazivom {{ param }}",
+      "updated": "Payment pod nazivom {{ param }} je ažuriran",
+      "deleted": "Payment pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Payment pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "date": "Date",
+      "student": "Student"
+    }
+  }
+}

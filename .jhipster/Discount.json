@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210110343",
+  "dto": "mapstruct",
+  "entityTableName": "discount",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "Discount",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

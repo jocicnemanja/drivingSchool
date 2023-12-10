@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210110143",
+  "dto": "mapstruct",
+  "entityTableName": "exam",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "constAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Exam",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

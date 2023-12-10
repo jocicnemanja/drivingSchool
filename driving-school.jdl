@@ -1,0 +1,92 @@
+
+
+
+entity Tenant {
+ name String,
+ phoneNumber String,
+}
+
+entity Student {
+	firstName String,
+    middleName String,
+	lastName String,
+	contractNumber String,
+	phoneNumber String,
+	jmbg String,
+	dateOfBirth ZonedDateTime,
+}
+
+entity Payment {
+	amount Integer,
+	date ZonedDateTime,
+}
+
+entity Lesson {
+	date ZonedDateTime,
+	type String,
+	costAmount Integer,
+}
+
+entity Exam {
+	date ZonedDateTime,
+	type String,
+	constAmount Integer,
+}
+
+entity Assurance {
+	date ZonedDateTime,
+	type String,
+	constAmount Integer,
+}
+
+entity Discount {
+	amount Float,
+}
+
+entity Documents {
+	name String,
+    type String,
+}
+
+entity Reports {
+	name String,
+    type String,
+}
+
+relationship OneToMany {
+	Student to Payment{student},
+}
+
+relationship OneToMany {
+	Student to Lesson{student},
+}
+
+relationship OneToMany {
+	Student to Assurance{student},
+}
+
+relationship OneToMany {
+	Student to Exam{student},
+}
+
+relationship OneToMany {
+	Student to Discount{student},
+}
+
+relationship OneToMany {
+	Student to Documents{student},
+}
+
+// Set pagination options
+paginate Student with pagination
+paginate Payment with pagination
+paginate Lesson with pagination
+paginate Assurance with pagination
+paginate Discount with pagination
+paginate Documents with pagination
+paginate Reports with pagination
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

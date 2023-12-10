@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="documents">
+      <h2 data-cy="documentsDetailsHeading"><span jhiTranslate="drivingSchoolApp.documents.detail.title">Documents</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ documents.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.documents.name">Name</span></dt>
+        <dd>
+          <span>{{ documents.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.documents.type">Type</span></dt>
+        <dd>
+          <span>{{ documents.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.documents.student">Student</span></dt>
+        <dd>
+          <div *ngIf="documents.student">
+            <a [routerLink]="['/student', documents.student.id, 'view']">{{ documents.student.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/documents', documents.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

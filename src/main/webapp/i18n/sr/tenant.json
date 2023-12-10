@@ -1,0 +1,25 @@
+{
+  "drivingSchoolApp": {
+    "tenant": {
+      "home": {
+        "title": "Tenants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Tenant",
+        "createOrEditLabel": "Kreirajte ili izmenite Tenant",
+        "notFound": "No Tenants found"
+      },
+      "created": "Kreiran je novi Tenant pod nazivom {{ param }}",
+      "updated": "Tenant pod nazivom {{ param }} je ažuriran",
+      "deleted": "Tenant pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Tenant pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Tenant"
+      },
+      "id": "ID",
+      "name": "Name",
+      "phoneNumber": "Phone Number"
+    }
+  }
+}

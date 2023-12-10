@@ -1,0 +1,27 @@
+{
+  "drivingSchoolApp": {
+    "assurance": {
+      "home": {
+        "title": "Assurances",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Assurance",
+        "createOrEditLabel": "Kreirajte ili izmenite Assurance",
+        "notFound": "No Assurances found"
+      },
+      "created": "Kreiran je novi Assurance pod nazivom {{ param }}",
+      "updated": "Assurance pod nazivom {{ param }} je ažuriran",
+      "deleted": "Assurance pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Assurance pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Assurance"
+      },
+      "id": "ID",
+      "date": "Date",
+      "type": "Type",
+      "constAmount": "Const Amount",
+      "student": "Student"
+    }
+  }
+}

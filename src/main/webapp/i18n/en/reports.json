@@ -1,0 +1,25 @@
+{
+  "drivingSchoolApp": {
+    "reports": {
+      "home": {
+        "title": "Reports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Reports",
+        "createOrEditLabel": "Create or edit a Reports",
+        "notFound": "No Reports found"
+      },
+      "created": "A new Reports is created with identifier {{ param }}",
+      "updated": "A Reports is updated with identifier {{ param }}",
+      "deleted": "A Reports is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Reports {{ id }}?"
+      },
+      "detail": {
+        "title": "Reports"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type"
+    }
+  }
+}

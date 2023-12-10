@@ -1,0 +1,26 @@
+{
+  "drivingSchoolApp": {
+    "documents": {
+      "home": {
+        "title": "Documents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Documents",
+        "createOrEditLabel": "Kreirajte ili izmenite Documents",
+        "notFound": "No Documents found"
+      },
+      "created": "Kreiran je novi Documents pod nazivom {{ param }}",
+      "updated": "Documents pod nazivom {{ param }} je ažuriran",
+      "deleted": "Documents pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Documents pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Documents"
+      },
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "student": "Student"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210110043",
+  "dto": "mapstruct",
+  "entityTableName": "lesson",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "costAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Lesson",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

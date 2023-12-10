@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210110243",
+  "dto": "mapstruct",
+  "entityTableName": "assurance",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "constAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Assurance",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

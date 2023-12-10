@@ -1,0 +1,25 @@
+{
+  "drivingSchoolApp": {
+    "discount": {
+      "home": {
+        "title": "Discounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Discount",
+        "createOrEditLabel": "Kreirajte ili izmenite Discount",
+        "notFound": "No Discounts found"
+      },
+      "created": "Kreiran je novi Discount pod nazivom {{ param }}",
+      "updated": "Discount pod nazivom {{ param }} je ažuriran",
+      "deleted": "Discount pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Discount pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Discount"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "student": "Student"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "applications": "*",
+  "changelogDate": "20231210110543",
+  "dto": "mapstruct",
+  "entityTableName": "reports",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Reports",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

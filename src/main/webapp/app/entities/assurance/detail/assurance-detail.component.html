@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="assurance">
+      <h2 data-cy="assuranceDetailsHeading"><span jhiTranslate="drivingSchoolApp.assurance.detail.title">Assurance</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ assurance.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.assurance.date">Date</span></dt>
+        <dd>
+          <span>{{ assurance.date | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.assurance.type">Type</span></dt>
+        <dd>
+          <span>{{ assurance.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.assurance.constAmount">Const Amount</span></dt>
+        <dd>
+          <span>{{ assurance.constAmount }}</span>
+        </dd>
+        <dt><span jhiTranslate="drivingSchoolApp.assurance.student">Student</span></dt>
+        <dd>
+          <div *ngIf="assurance.student">
+            <a [routerLink]="['/student', assurance.student.id, 'view']">{{ assurance.student.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/assurance', assurance.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

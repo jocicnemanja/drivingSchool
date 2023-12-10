@@ -1,0 +1,27 @@
+{
+  "drivingSchoolApp": {
+    "lesson": {
+      "home": {
+        "title": "Lessons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Lesson",
+        "createOrEditLabel": "Kreirajte ili izmenite Lesson",
+        "notFound": "No Lessons found"
+      },
+      "created": "Kreiran je novi Lesson pod nazivom {{ param }}",
+      "updated": "Lesson pod nazivom {{ param }} je ažuriran",
+      "deleted": "Lesson pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Lesson pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Lesson"
+      },
+      "id": "ID",
+      "date": "Date",
+      "type": "Type",
+      "costAmount": "Cost Amount",
+      "student": "Student"
+    }
+  }
+}
