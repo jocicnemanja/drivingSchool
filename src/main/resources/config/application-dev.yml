@@ -32,9 +32,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/drivingSchool;DB_CLOSE_DELAY=-1
-    username: drivingSchool
-    password:
+    url: jdbc:postgresql://localhost:5432/test
+    username: admin
+    password: admin
     hikari:
       poolName: Hikari
       auto-commit: false

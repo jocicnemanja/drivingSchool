@@ -813,14 +813,24 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+<!--            <properties>-->
+<!--                &lt;!&ndash; default Spring profiles &ndash;&gt;-->
+<!--                <spring.profiles.active>dev${profile.tls}${profile.no-liquibase}</spring.profiles.active>-->
+<!--                <profile.test>testdev</profile.test>-->
+<!--                <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.H2Dialect</liquibase-plugin.hibernate-dialect>-->
+<!--                <liquibase-plugin.driver>org.h2.Driver</liquibase-plugin.driver>-->
+<!--                <liquibase-plugin.url>jdbc:h2:file:${project.build.directory}/h2db/db/drivingSchool</liquibase-plugin.url>-->
+<!--                <liquibase-plugin.username>drivingSchool</liquibase-plugin.username>-->
+<!--                <liquibase-plugin.password/>-->
+<!--            </properties>-->
             <properties>
                 <!-- default Spring profiles -->
-                <spring.profiles.active>dev${profile.tls}${profile.no-liquibase}</spring.profiles.active>
-                <profile.test>testdev</profile.test>
-                <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.H2Dialect</liquibase-plugin.hibernate-dialect>
-                <liquibase-plugin.driver>org.h2.Driver</liquibase-plugin.driver>
-                <liquibase-plugin.url>jdbc:h2:file:${project.build.directory}/h2db/db/drivingSchool</liquibase-plugin.url>
-                <liquibase-plugin.username>drivingSchool</liquibase-plugin.username>
+                <spring.profiles.active>dev${profile.api-docs}${profile.tls}${profile.e2e}${profile.no-liquibase}</spring.profiles.active>
+                <profile.test>testprod</profile.test>
+                <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.PostgreSQLDialect</liquibase-plugin.hibernate-dialect>
+                <liquibase-plugin.driver>org.postgresql.Driver</liquibase-plugin.driver>
+                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/test</liquibase-plugin.url>
+                <liquibase-plugin.username>admin</liquibase-plugin.username>
                 <liquibase-plugin.password/>
             </properties>
             <dependencies>
@@ -832,6 +842,10 @@
                 <dependency>
                     <groupId>com.h2database</groupId>
                     <artifactId>h2</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
                 </dependency>
             </dependencies>
             <build>
