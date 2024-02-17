@@ -1,0 +1,14 @@
+name: tenant_2
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  url: jdbc:postgresql://localhost:5432/tenant_2
+  username: admin
+  password: admin
+  hikari:
+    poolName: Hikari
+    auto-commit: false
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto=update:

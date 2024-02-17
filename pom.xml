@@ -829,7 +829,7 @@
                 <profile.test>testprod</profile.test>
                 <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.PostgreSQLDialect</liquibase-plugin.hibernate-dialect>
                 <liquibase-plugin.driver>org.postgresql.Driver</liquibase-plugin.driver>
-                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/test</liquibase-plugin.url>
+                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/tenant_1</liquibase-plugin.url>
                 <liquibase-plugin.username>admin</liquibase-plugin.username>
                 <liquibase-plugin.password/>
             </properties>

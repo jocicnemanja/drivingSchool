@@ -6,6 +6,7 @@ import static com.drivingschool.security.SecurityUtils.JWT_ALGORITHM;
 import com.drivingschool.web.rest.vm.LoginVM;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -51,6 +52,7 @@ public class AuthenticateController {
         this.authenticationManagerBuilder = authenticationManagerBuilder;
     }
 
+    @Transactional
     @PostMapping("/authenticate")
     public ResponseEntity<JWTToken> authorize(@Valid @RequestBody LoginVM loginVM) {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
@@ -98,6 +100,7 @@ public class AuthenticateController {
             .build();
 
         JwsHeader jwsHeader = JwsHeader.with(JWT_ALGORITHM).build();
+
         return this.jwtEncoder.encode(JwtEncoderParameters.from(jwsHeader, claims)).getTokenValue();
     }
 
