@@ -71,8 +71,8 @@
     "webapp:build": "npm run clean-www && npm run webapp:build:dev",
     "webapp:build:dev": "ng build --configuration development",
     "webapp:build:prod": "ng build --configuration production",
-    "webapp:dev": "ng serve",
-    "webapp:dev-ssl": "ng serve --ssl",
+    "webapp:dev": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng serve",
+    "webapp:dev-ssl": " ng serve --ssl",
     "webapp:dev-verbose": "ng serve --verbose",
     "webapp:prod": "npm run clean-www && npm run webapp:build:prod",
     "webapp:test": "npm run test --"

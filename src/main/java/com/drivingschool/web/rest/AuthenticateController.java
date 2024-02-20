@@ -3,6 +3,7 @@ package com.drivingschool.web.rest;
 import static com.drivingschool.security.SecurityUtils.AUTHORITIES_KEY;
 import static com.drivingschool.security.SecurityUtils.JWT_ALGORITHM;
 
+import com.drivingschool.config.TenantContext;
 import com.drivingschool.web.rest.vm.LoginVM;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.servlet.http.HttpServletRequest;
@@ -97,6 +98,7 @@ public class AuthenticateController {
             .expiresAt(validity)
             .subject(authentication.getName())
             .claim(AUTHORITIES_KEY, authorities)
+            .claim("tenantName", TenantContext.getCurrentTenant())
             .build();
 
         JwsHeader jwsHeader = JwsHeader.with(JWT_ALGORITHM).build();
