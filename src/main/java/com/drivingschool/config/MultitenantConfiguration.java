@@ -103,8 +103,8 @@ public class MultitenantConfiguration {
         return new HikariDataSource( new MultitenantHikariConfig("tenant_2"));
     }
 
-    @Bean
-    public PlatformTransactionManager transactionManager() {
-        return new DataSourceTransactionManager(multitenantDataSource());
-    }
+//    @Bean
+//    public PlatformTransactionManager transactionManager() {
+//        return new DataSourceTransactionManager(multitenantDataSource());
+//    }
 }

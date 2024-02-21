@@ -79,8 +79,6 @@ public class User extends AbstractAuditingEntity<Long> implements Serializable {
     @Column(name = "reset_date")
     private Instant resetDate = null;
 
-    @Column(name = "tenant")
-    private String tenant = "nesto";
 
     @JsonIgnore
     @ManyToMany
@@ -181,12 +179,7 @@ public class User extends AbstractAuditingEntity<Long> implements Serializable {
         this.resetDate = resetDate;
     }
 
-    public String getTenant() {
-        return tenant;
-    }
-    public void setTenant(String tenant) {
-        this.tenant = tenant;
-    }
+
     public String getLangKey() {
         return langKey;
     }

@@ -28,10 +28,9 @@ export class AuthServerProvider {
     const tenantName = this.extractTenantName(credentials.username);
 
     const httpHeaders: HttpHeaders = new HttpHeaders({
-      'X-TenantName': 'tenant_2'
+      'X-TenantName': tenantName
   });
 
-    const headers = new HttpHeaders().set('X-TenantName', 'tenant_1');
     return this.http
       .post<JwtToken>(this.applicationConfigService.getEndpointFor('api/authenticate'), credentials, { headers:httpHeaders })
       .pipe(map(response => this.authenticateSuccess(response, credentials.rememberMe)));
@@ -45,17 +44,12 @@ export class AuthServerProvider {
   }
 
   private authenticateSuccess(response: JwtToken, rememberMe: boolean): void {
+    debugger
     this.stateStorageService.storeAuthenticationToken(response.id_token, rememberMe);
   }
 
-  private extractTenantName(username: string): string{
-    const regex = /\+(.*?)@/;
-    const match = username.match(regex);
-
-    if (match) {
-      return  match[1];
-    } else {
-      return "";
-    }
+  private extractTenantName(username: string): string {
+    const parts = username.split("+");
+    return parts.length > 1 ? parts[1] : "";
   }
 }
