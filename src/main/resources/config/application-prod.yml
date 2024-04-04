@@ -43,10 +43,10 @@ spring:
   liquibase:
     contexts: prod
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: email-smtp.eu-central-1.amazonaws.com
+    port: 587
+    username: AKIAX2QHZ26FPVZP7HDC
+    password: BDjoPoXDrC8cH5Hb03Zx+IR8k2Nt6jqgaw9LRIRJCGzD
   thymeleaf:
     cache: true
 

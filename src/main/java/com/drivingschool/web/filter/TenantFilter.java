@@ -1,18 +1,4 @@
-package com.drivingschool.web.filter;
-import com.drivingschool.config.MultitenantConfiguration;
-import com.drivingschool.config.TenantContext;
-import jakarta.servlet.*;
-import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.annotation.Order;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Component;
-import java.io.IOException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.oauth2.jwt.Jwt;
+
 
 @Component
 @Order(1)
@@ -32,7 +18,7 @@ class TenantFilter implements Filter {
                     tenantName = jwtToken.getClaimAsString("tenantName");
                 }
 
-                log.info("___________________ TEST ____________________");
+                log.info("___________________ TEST 1233123 ____________________");
                 log.info("_________________ TENANT ID _________________");
                 log.info("_____________ " + tenantName + "------------");
 
@@ -45,3 +31,18 @@ class TenantFilter implements Filter {
     }
 
 }
+package com.drivingschool.web.filter;
+import com.drivingschool.config.MultitenantConfiguration;
+import com.drivingschool.config.TenantContext;
+import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
+import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.oauth2.jwt.Jwt;
